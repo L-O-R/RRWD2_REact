@@ -62,6 +62,7 @@ export class LifecycleDemo extends Component {
     // 6. getSnapshotBeforeUpdate: Called just before React updates the DOM.
     // Captures current scroll position or other DOM state before changes.
     // The returned value is passed to componentDidUpdate.
+    console.log(prevState);
     console.log(
       "6. getSnapshotBeforeUpdate: Capturing a snapshot before DOM updates."
     );
@@ -72,6 +73,10 @@ export class LifecycleDemo extends Component {
     // 7. componentDidUpdate: Runs after the component has updated (re-rendered).
     // Ideal for side effects after state/prop changes, like data fetching
     // based on new props.
+
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+    console.log("snapshot", snapshot);
     console.log(
       "7. componentDidUpdate: Component has finished updating."
     );
