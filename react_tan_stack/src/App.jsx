@@ -5,14 +5,16 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 //this is a store i guess
+// store
 const queryClient = new QueryClient();
 const App = () => {
   return (
     <div>
+      {/* provider */}
       <QueryClientProvider client={queryClient}>
         <h1>React Query Example</h1>
         <p>Fetching user data with React Query</p>
-        <UserProfile userId={4} />
+        <UserProfile userId={9} />
       </QueryClientProvider>
     </div>
   );
