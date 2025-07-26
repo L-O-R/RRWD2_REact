@@ -1,19 +1,14 @@
-import React from "react";
-import { useCounterStore } from "./zustand/store";
+import React, { useState } from "react";
+import Child from "./components/Child";
+import { useAppStore } from "./zustand/store";
+import Login from "./components/Login";
+import PRofile from "./components/PRofile";
 
 const App = () => {
-  const { count, increment, decrement, reset, setCount } =
-    useCounterStore();
-
   return (
     <div>
-      <h1>Counter: {count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={reset}>Reset</button>
-      <button onClick={() => setCount(120)}>
-        Set Count to 10
-      </button>
+      <Login />
+      <PRofile />
     </div>
   );
 };
