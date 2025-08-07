@@ -8,6 +8,7 @@ import CounterDeluxe from "./apps/CounterDeluxe/CounterDeluxe";
 import UserProfile from "./apps/UserProfile/UserProfile";
 import TodoFilters from "./apps/TodoFilters/TodoFilters";
 import MiniShop from "./apps/MiniShop/MiniShop";
+import TodoAPI from "./apps/TodoAPI/TodoAPI";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Link to="/profile">Profile</Link>
         <Link to="/todos">Todos</Link>
         <Link to="/cart">Shop</Link>
+        <Link to="/TodoApi">Todo API</Link>
       </nav>
 
       <Routes>
@@ -27,6 +29,7 @@ export default function App() {
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/todos" element={<TodoFilters />} />
         <Route path="/cart/*" element={<MiniShop />} />
+        <Route path="/TodoApi" element={<TodoAPI />} />
       </Routes>
     </BrowserRouter>
   );

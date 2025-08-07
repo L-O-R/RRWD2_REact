@@ -5,10 +5,9 @@ const TodoAPI = () => {
   const [Loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => {
-        response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setData(data);
       })
       .catch((error) => {
