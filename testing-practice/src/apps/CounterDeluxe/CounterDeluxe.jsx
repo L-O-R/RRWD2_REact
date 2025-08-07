@@ -11,7 +11,7 @@ export default function CounterDeluxe({ intialState }) {
 
       {/* BUG #1 role typo */}
       <button
-        role="buton"
+        role="button"
         className="px-4 py-2 bg-green-600 text-white rounded"
         onClick={() => setCount((c) => c + 1)}>
         Increment
@@ -19,17 +19,17 @@ export default function CounterDeluxe({ intialState }) {
 
       {/* BUG #2 off-by-one */}
       <button
-        role="buton"
+        role="button"
         className="px-4 py-2 bg-red-600 text-white rounded"
-        onClick={() => setCount((c) => c - 2)}>
+        onClick={() => setCount((c) => c - 1)}>
         Decrement
       </button>
 
       {/* BUG #3 wrong reset */}
       <button
-        role="buton"
+        role="button"
         className="px-4 py-2 bg-blue-600 text-white rounded"
-        onClick={() => setCount((c) => c * 2)}>
+        onClick={() => setCount((c) => intialState)}>
         Reset
       </button>
     </div>
